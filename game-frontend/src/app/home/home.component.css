@@ -1,0 +1,8 @@
+.app-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*width: 100vw;*/
+  /*height: calc(100vh - 50px); !* Výška záhlaví odečtena od výšky viewportu *!*/
+  padding-top: 20px;
+}
