@@ -4,9 +4,10 @@
   overflow: hidden;
   position: relative;
   display: flex;
-  justify-content: center; /* Středově zarovná vnitřní obsah horizontálně */
-  align-items: center; /* Středově zarovná vnitřní obsah vertikálně */
+  justify-content: center;
+  align-items: center;
   border: 1px solid #000000;
+  margin: 0 auto;
 }
 
 .map-container .grid {
@@ -21,11 +22,27 @@
 ::ng-deep .grid-cell {
   border: 1px solid #000000;
   background-color: #e0e0e0;
-  width: 50px; /* Přidejte pevnou šířku */
-  height: 50px; /* Přidejte pevnou výšku */
-  transition: background-color 0.3s; /* Přidá přechod pro efekt při hover */
+  width: 50px;
+  height: 50px;
+  transition: background-color 0.3s;
 }
 
 ::ng-deep .grid-cell:hover {
-  background-color: #a4ffa4; /* Barva při najetí myší */
+  background-color: #a4ffa4;
+}
+
+/*::ng-deep .village-cell {*/
+/*  background-color: #800080; !* Fialová barva *!*/
+/*}*/
+
+.info-window {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 1px solid #000;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* Zabrání rušení událostí myší */
+  transition: opacity 0.2s;
 }

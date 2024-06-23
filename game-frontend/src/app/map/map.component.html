@@ -1,6 +1,12 @@
-<!--<h1>Ahoj -> Mapa:</h1>-->
 <div class="map-container" #mapContainer>
   <div class="grid" #gridContainer>
     <!-- Buňky mřížky budou zde dynamicky generovány -->
   </div>
+</div>
+
+<div class="info-window" *ngIf="currentVillage" [style.left.px]="infoWindowX" [style.top.px]="infoWindowY">
+  <p>Název: {{ currentVillage.name }}</p>
+  <p>Majitel: {{ currentVillage.owner }}</p>
+  <p>Typ: {{ currentVillage.type }}</p>
+  <p>Body: {{ currentVillage.points }}</p>
 </div>
