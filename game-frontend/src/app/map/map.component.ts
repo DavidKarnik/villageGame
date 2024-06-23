@@ -88,16 +88,9 @@ export class MapComponent implements AfterViewInit {
   }
 
   showInfoWindow(event: MouseEvent, village: Village): void {
-    console.log("mouse enter village: " + village.name);
-    if (this.currentVillage) {
-      console.log("mouse enter currentVillage: " + this.currentVillage.name);
-    }
-
+    // console.log("mouse enter village: " + village.name);
     this.currentVillage = village;
-    console.log("mouse enter village: " + village.name);
-
-    console.log("mouse enter currentVillage: " + this.currentVillage.name);
-
+    // console.log("mouse enter currentVillage: " + this.currentVillage.name);
     this.infoWindowX = event.pageX + 10; // Nastavte X pozici info window
     this.infoWindowY = event.pageY + 10; // Nastavte Y pozici info window
   }
