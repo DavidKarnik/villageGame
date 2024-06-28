@@ -2,7 +2,7 @@
 
 Project of web game using Angluar and Spring Boot.
 
-#### Description
+### Description
 
 
 ### Used Tools and Languages
