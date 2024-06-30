@@ -1,1 +1,15 @@
-<p>village-image works!</p>
+<div class="village-wrapper">
+  <div class="village-container">
+    <!-- Podkladový obrázek vesnice -->
+    <img src="assets/villageTry.png" alt="Village" class="village-background">
+
+    <!-- Hlavní budova -->
+    <img *ngIf="mainImage" [src]="mainImage" class="building main" alt="Main Building">
+
+    <!-- Kovárna -->
+    <img *ngIf="smithImage" [src]="smithImage" class="building smith" alt="Smithy">
+
+    <!-- Kasárny -->
+    <img *ngIf="barracksImage" [src]="barracksImage" class="building barracks" alt="Barracks">
+  </div>
+</div>
