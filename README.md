@@ -7,5 +7,5 @@ Project of web game using Angluar and Spring Boot.
 
 ### Used Tools and Languages
 
-Front-end -> Angular, TypeScript
+Front-end -> Angular, TypeScript <\br>
 Back-end  -> SpringBoot, Java
