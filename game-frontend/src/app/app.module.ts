@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
+import { VillagePageComponent } from './village-page/village-page.component';
+import { VillageImageComponent } from './village-image/village-image.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {HttpClientModule} from "@angular/common/http";
     HeaderComponent,
     MapComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    VillagePageComponent,
+    VillageImageComponent
   ],
   imports: [
     BrowserModule,

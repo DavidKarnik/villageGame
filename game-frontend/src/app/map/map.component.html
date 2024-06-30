@@ -5,7 +5,7 @@
 </div>
 
 <div class="info-window" *ngIf="currentVillage" [style.left.px]="infoWindowX" [style.top.px]="infoWindowY">
-  <p>Název: {{ currentVillage.name }}</p>
+  <p>{{ currentVillage.name }}</p>
   <p>Majitel: {{ currentVillage.owner }}</p>
   <p>Typ: {{ currentVillage.type }}</p>
   <p>Body: {{ currentVillage.points }}</p>
