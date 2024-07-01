@@ -4,12 +4,38 @@
     <img src="assets/villageTry.png" alt="Village" class="village-background">
 
     <!-- Hlavní budova -->
-    <img *ngIf="mainImage" [src]="mainImage" class="building main" alt="Main Building">
+    <img *ngIf="mainImage"
+         [src]="mainImage"
+         class="building main"
+         alt="Main Building"
+         (mouseenter)="showInfoWindow($event, 'Radnice', mainLevel, 'info')"
+         (mouseleave)="hideInfoWindow()"
+         (click)="openMainBuildingModal()"> <!-- Otevře modál při kliknutí -->
 
     <!-- Kovárna -->
-    <img *ngIf="smithImage" [src]="smithImage" class="building smith" alt="Smithy">
+    <img *ngIf="smithImage"
+         [src]="smithImage"
+         class="building smith"
+         alt="Smithy"
+         (mouseenter)="showInfoWindow($event, 'Kovárna', smithLevel, 'info')"
+         (mouseleave)="hideInfoWindow()"
+         (click)="openSmithyModal()">
 
     <!-- Kasárny -->
-    <img *ngIf="barracksImage" [src]="barracksImage" class="building barracks" alt="Barracks">
+    <img *ngIf="barracksImage"
+         [src]="barracksImage"
+         class="building barracks"
+         alt="Barracks"
+         (mouseenter)="showInfoWindow($event, 'Kasárny', barracksLevel, 'info')"
+         (mouseleave)="hideInfoWindow()"
+         (click)="openBarracksModal()">
   </div>
+</div>
+
+
+<div class="info-window" *ngIf="showBuildingStats" [style.left.px]="infoWindowX" [style.top.px]="infoWindowY">
+<!--  <p>testing</p>-->
+  <p>{{ buildingName }}</p>
+  <p>Level: {{ buildingLevel }}</p>
+  <p>Info : {{ buildingInfo }}</p>
 </div>

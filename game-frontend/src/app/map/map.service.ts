@@ -15,11 +15,11 @@ export class MapService {
     // return this.http.get<Village[]>(this.apiUrl);
     // Staticky definovaná data pro testování
     const villages: Village[] = [
-      { id: 1, type: 'player', owner: 'Player 1', name: 'Village A', points: 100, position: { x: 1, y: 1 } },
-      { id: 2, type: 'barbarian', owner: 'Barbarian', name: 'Barbarian Village', points: 50, position: { x: 2, y: 3 } },
-      { id: 3, type: 'player', owner: 'Player 2', name: 'Village B', points: 120, position: { x: 5, y: 6 } },
-      { id: 4, type: 'player', owner: 'Player 3', name: 'Village C', points: 200, position: { x: 8, y: 8 } },
-      { id: 5, type: 'barbarian', owner: 'Barbarian', name: 'Barbarian Village 2', points: 75, position: { x: 7, y: 2 } }
+      { id: 1, type: 'player', owner: 'Player 1', name: 'Village A', points: 100, position: { x: 1, y: 1 }, mainBuilding: 1, smithBuilding: 1, barracksBuilding: 1 },
+      { id: 2, type: 'barbarian', owner: 'Barbarian', name: 'Barbarian Village', points: 50, position: { x: 2, y: 3 }, mainBuilding: 1, smithBuilding: 1, barracksBuilding: 1 },
+      { id: 3, type: 'player', owner: 'Player 2', name: 'Village B', points: 120, position: { x: 5, y: 6 }, mainBuilding: 1, smithBuilding: 1, barracksBuilding: 1 },
+      { id: 4, type: 'player', owner: 'Player 3', name: 'Village C', points: 200, position: { x: 8, y: 8 }, mainBuilding: 1, smithBuilding: 1, barracksBuilding: 1 },
+      { id: 5, type: 'barbarian', owner: 'Barbarian', name: 'Barbarian Village 2', points: 75, position: { x: 7, y: 2 }, mainBuilding: 1, smithBuilding: 1, barracksBuilding: 1 }
     ];
 
     // Vrací Observable se statickými daty

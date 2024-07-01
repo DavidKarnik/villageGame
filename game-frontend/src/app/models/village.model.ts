@@ -5,4 +5,7 @@ export interface Village {
   name: string;  // Název vesnice
   points: number; // Body vesnice
   position: { x: number; y: number }; // Pozice vesnice na mapě
+  mainBuilding: number;
+  smithBuilding: number;
+  barracksBuilding: number;
 }

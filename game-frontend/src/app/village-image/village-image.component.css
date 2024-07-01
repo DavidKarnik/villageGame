@@ -28,7 +28,7 @@
 }
 
 .main {
-  top: calc(50% - 45px); /* Vycentruje hlavní budovu */
+  top: calc(80px); /* Vycentruje hlavní budovu */
   left: calc(50% - 45px); /* Vycentruje hlavní budovu */
 }
 
@@ -40,4 +40,17 @@
 .barracks {
   top: calc(50% - 45px); /* Zarovná kasárny s hlavní budovou vertikálně */
   left: calc(50% + 90px); /* Umístí kasárny vpravo od hlavní budovy */
+}
+
+
+.info-window {
+  position: absolute;
+  /*display: none;*/
+  background-color: white;
+  border: 1px solid #000;
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* Zabrání rušení událostí myší */
+  transition: opacity 0.2s;
 }

@@ -11,6 +11,12 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 import { VillagePageComponent } from './village-page/village-page.component';
 import { VillageImageComponent } from './village-image/village-image.component';
+import { MainBuildingModalComponent } from './modal-building-main/modal-building-main.component';
+import { ModalBuildingSmithComponent } from './modal-building-smith/modal-building-smith.component';
+import { ModalBuildingBarracksComponent } from './modal-building-barracks/modal-building-barracks.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +26,18 @@ import { VillageImageComponent } from './village-image/village-image.component';
     LoginComponent,
     HomeComponent,
     VillagePageComponent,
-    VillageImageComponent
+    VillageImageComponent,
+    MainBuildingModalComponent,
+    ModalBuildingSmithComponent,
+    ModalBuildingBarracksComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule // Zajistěte, že MatDialogModule je zde zahrnut
+
   ],
   providers: [],
   bootstrap: [AppComponent] // první zobrazená komponenta

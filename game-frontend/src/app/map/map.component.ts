@@ -40,10 +40,10 @@ export class MapComponent implements AfterViewInit {
 
   generateGrid(rows: number, cols: number): void {
     const gridElement = this.gridContainer.nativeElement;
-    gridElement.innerHTML = ''; // Vyprázdněte existující obsah
+    gridElement.innerHTML = ''; // clear existující obsah
     for (let i = 0; i < rows * cols; i++) {
       const cell = document.createElement('div');
-      cell.className = 'grid-cell'; // Přidejte třídu
+      cell.className = 'grid-cell'; // new cllases
       gridElement.appendChild(cell);
     }
   }

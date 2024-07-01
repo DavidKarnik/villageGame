@@ -1,4 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {ModalBuildingBarracksComponent} from "../modal-building-barracks/modal-building-barracks.component";
+import {MainBuildingModalComponent} from "../modal-building-main/modal-building-main.component";
+import {ModalBuildingSmithComponent} from "../modal-building-smith/modal-building-smith.component";
 
 @Component({
   selector: 'app-village-image',
@@ -15,6 +19,16 @@ export class VillageImageComponent implements OnInit {
   smithImage = '';
   barracksImage = '';
 
+  showBuildingStats = false; // Aktuální vesnice pro zobrazení informací
+  infoWindowX = 0; // Pozice X pro info window
+  infoWindowY = 0; // Pozice Y pro info window
+  buildingName = '';
+  buildingLevel = 0;
+  buildingInfo = '';
+
+
+  constructor(private dialog: MatDialog) { }
+
   ngOnInit(): void {
     this.updateImages();
   }
@@ -30,4 +44,37 @@ export class VillageImageComponent implements OnInit {
     console.log('Smith image:', this.smithImage);
     console.log('Barracks image:', this.barracksImage);
   }
+
+  showInfoWindow(event: MouseEvent, name: string, level: number, info: string): void {
+    this.showBuildingStats = true;
+    this.infoWindowX = event.pageX + 10; // Nastavte X pozici info window
+    this.infoWindowY = event.pageY + 10; // Nastavte Y pozici info window
+    this.buildingName = name;
+    this.buildingLevel = level;
+    this.buildingInfo = info;
+  }
+
+  hideInfoWindow(): void {
+    this.showBuildingStats = false;
+  }
+
+  // Otevření modálního okna
+  openMainBuildingModal(): void {
+    this.dialog.open(MainBuildingModalComponent, {
+      width: '400px',
+    });
+  }
+
+  openSmithyModal(): void {
+    this.dialog.open(ModalBuildingSmithComponent, {
+      width: '400px',
+    });
+  }
+
+  openBarracksModal(): void {
+    this.dialog.open(ModalBuildingBarracksComponent, {
+      width: '400px',
+    });
+  }
 }
+
