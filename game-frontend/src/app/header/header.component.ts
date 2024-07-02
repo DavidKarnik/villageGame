@@ -10,6 +10,11 @@ export class HeaderComponent {
   constructor(private router: Router) {
   }
 
+  isMenuOpen = false;
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
   // Metoda pro navigaci na různé sekce
   navigateTo(section: string): void {
     this.router.navigate([section]);

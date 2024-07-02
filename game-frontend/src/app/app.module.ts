@@ -16,6 +16,7 @@ import { ModalBuildingSmithComponent } from './modal-building-smith/modal-buildi
 import { ModalBuildingBarracksComponent } from './modal-building-barracks/modal-building-barracks.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MatDialogModule // Zajistěte, že MatDialogModule je zde zahrnut
+    MatDialogModule,
+    MatButtonModule,
+    // Zajistěte, že MatDialogModule je zde zahrnut
 
   ],
   providers: [],

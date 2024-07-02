@@ -61,19 +61,22 @@ export class VillageImageComponent implements OnInit {
   // Otevření modálního okna
   openMainBuildingModal(): void {
     this.dialog.open(MainBuildingModalComponent, {
-      width: '400px',
+      width: '70%',
+      height: '70%'
     });
   }
 
   openSmithyModal(): void {
     this.dialog.open(ModalBuildingSmithComponent, {
-      width: '400px',
+      width: '70%',
+      height: '70%'
     });
   }
 
   openBarracksModal(): void {
     this.dialog.open(ModalBuildingBarracksComponent, {
-      width: '400px',
+      width: '70%',
+      height: '70%'
     });
   }
 }
